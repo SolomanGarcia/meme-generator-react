@@ -16,13 +16,34 @@ class MemeGenerator extends Component {
       .then((response) => response.json())
       .then((response) => {
         const { memes } = response.data;
-        console.log(memes[0]);
         this.setState({ allMemeImgs: memes });
       });
   }
 
   render() {
-    return <h1>MEME GENERATOR SECTION</h1>;
+    return (
+      <div>
+        <form className="meme-form">
+          <input
+            type="text"
+            name="topText"
+            placeholder="Top Text"
+            value={this.state.topText}
+            onChange={}
+          />
+
+          <input
+            type="text"
+            name="bottomText"
+            placeholder="Bottom Text"
+            value={this.state.bottomText}
+            onChange={}
+          />
+
+          <button>Generate Meme</button>
+        </form>
+      </div>
+    );
   }
 }
 
