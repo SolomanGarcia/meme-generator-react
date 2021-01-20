@@ -1,7 +1,14 @@
 import React from "react";
 
 function Header() {
-  return ()
+  return (
+    <header>
+      <img
+        src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
+        alt="troll face meme"
+      />
+    </header>
+  );
 }
 
 export default Header;
